@@ -1,35 +1,65 @@
-import React, { useState } from 'react';
+import React from "react";
 
-const Formurario = () => {
-  const [name, setName] = useState('');
-  const [message, setMessage] = useState('');
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setName('');
-    setMessage('');
-  };
-
+export default function RecommendationForm() {
   return (
-    <form className="recommendation-form" onSubmit={handleSubmit}>
-      <label htmlFor="name">Name (Optional)</label>
-      <input
-        id="name"
-        type="text"
-        value={name}
-        onChange={e => setName(e.target.value)}
-        placeholder="Name (Optional)"
-      />
-      <label htmlFor="message">Message</label>
-      <textarea
-        id="message"
-        value={message}
-        onChange={e => setMessage(e.target.value)}
-        placeholder="Message"
-      />
-      <button type="submit">Submit</button>
-    </form>
+    <div style={styles.container}>
+      <form style={styles.form}>
+        <h2 style={styles.heading}>Leave a Recommendation</h2>
+        <input
+          type="text"
+          placeholder="Name (Optional)"
+          style={styles.input}
+        />
+        <textarea placeholder="Message" style={styles.textarea} />
+        <div style={styles.buttonContainer}>
+          <button type="submit" style={styles.button}>Submit</button>
+        </div>
+      </form>
+    </div>
   );
-};
+}
 
-export default Formurario;
+const styles = {
+  container: {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    minHeight: "100vh",
+    backgroundColor: "#fff",
+  },
+  form: {
+    display: "flex",
+    flexDirection: "column",
+    width: "1000px",
+    gap: "10px",
+  },
+  heading: {
+    textAlign: "center",
+  },
+  input: {
+    padding: "8px",
+    border: "1px solid #ccc",
+    borderRadius: "4px",
+  },
+  textarea: {
+    padding: "8px",
+    border: "1px solid #ccc",
+    borderRadius: "4px",
+    minHeight: "150px", // Increased height
+    resize: "vertical",
+  },
+  buttonContainer: {
+    display: "flex",
+    justifyContent: "center",
+  },
+  button: {
+    backgroundColor: "#fff",
+    color: "purple",
+    border: "1px solid purple",
+    borderRadius: "4px",
+    padding: "8px",
+    cursor: "pointer",
+    transition: "background-color 0.3s",
+    width: "200px", // Made button smaller
+  },
+};
