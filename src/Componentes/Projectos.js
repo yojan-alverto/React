@@ -1,40 +1,45 @@
-import React from 'react';
+import React from "react";
+import { Container } from "react-bootstrap";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
-const Projects = () => (
-  <section className="max-w-3xl mx-auto p-6">
-    <h2 className="text-purple-700 text-3xl font-bold mb-8 text-left">Projects</h2>
+function Projectos() {
+  return (
+    <Container className="py-5" style={{ maxWidth: "800px" }}>
+      <h2 className="fw-bold mb-4" style={{ color: "#6a0dad" }}>Projects</h2>
 
-    <div className="mb-6 text-left">
-      <h3 className="font-bold text-lg mb-1 text-left">Chatbot</h3>
-      <ul className="list-disc list-inside text-left">
-        <li>
-          Developed a secure website integrated with chatbot for an automobile client using HTML, CSS, JavaScript and IBM Watson Assistant
-        </li>
-      </ul>
-    </div>
+      {/* Proyecto 1 */}
+      <div className="mb-4">
+        <h5 className="fw-bold">Chatbot</h5>
+        <ul className="mt-2 ps-3">
+          <li>
+            Developed a secure website integrated with chatbot for an automobile client using <strong>HTML, CSS, JavaScript</strong> and <strong>IBM Watson Assistant</strong>.
+          </li>
+        </ul>
+        <hr />
+      </div>
 
-    <hr className="my-4 border-gray-300 w-full" />
+      {/* Proyecto 2 */}
+      <div className="mb-4">
+        <h5 className="fw-bold">Sentiment Analyzer</h5>
+        <ul className="mt-2 ps-3">
+          <li>
+            Developed and deployed a sentiment analyzer for the box reviews section of an eCommerce platform using <strong>IBM NLU</strong>.
+          </li>
+        </ul>
+        <hr />
+      </div>
 
-    <div className="mb-6 text-left">
-      <h3 className="font-bold text-lg mb-1 text-left">Sentiment Analyzer</h3>
-      <ul className="list-disc list-inside text-left">
-        <li>
-          Developed and deployed a sentiment analyzer for the box reviews section of an eCommerce platform using IBM NLU
-        </li>
-      </ul>
-    </div>
+      {/* Proyecto 3 */}
+      <div>
+        <h5 className="fw-bold">Fashion Website</h5>
+        <ul className="mt-2 ps-3">
+          <li>
+            Created a styled multi-page website for a new player in the fashion industry and integrated it with a shopping cart, using <strong>Stripe</strong> for payment gateway.
+          </li>
+        </ul>
+      </div>
+    </Container>
+  );
+}
 
-    <hr className="my-4 border-gray-300 w-full" />
-
-    <div className="text-left">
-      <h3 className="font-bold text-lg mb-1 text-left">Fashion Website</h3>
-      <ul className="list-disc list-inside text-left">
-        <li>
-          Created a styled multi-page website for a new player in the fashion industry and integrated it with a shopping cart, using stripe for payment gateway
-        </li>
-      </ul>
-    </div>
-  </section>
-);
-
-export default Projects;
+export default Projectos;
