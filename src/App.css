@@ -36,3 +36,73 @@
     transform: rotate(360deg);
   }
 }
+
+.info-perfil {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin: 2rem 0 2rem 0;
+}
+.profile-img-container {
+  flex-shrink: 0;
+}
+.profile-img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background: #f0f0f0;
+  object-fit: cover;
+  border: 6px solid #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+.profile-text h1 {
+  color: #6b21a8;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+.profile-text p {
+  color: #444;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+.projects-section {
+  margin: 2rem 0;
+}
+.projects-section h2 {
+  color: #6b21a8;
+  margin-bottom: 1rem;
+}
+.projects-section ul {
+  list-style: none;
+  padding: 0;
+}
+.projects-section li {
+  margin-bottom: 1.2rem;
+}
+.recommendation-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-width: 400px;
+  margin: 2rem 0;
+}
+.recommendation-form input,
+.recommendation-form textarea {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+.recommendation-form button {
+  background: #6b21a8;
+  color: #fff;
+  border: none;
+  padding: 0.7rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 0.5rem;
+}
+.recommendation-form button:hover {
+  background: #4b1586;
+}
